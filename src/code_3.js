@@ -3,7 +3,7 @@
  * @Autor: 蒋承志
  * @Date: 2023-10-12 17:06:47
  * @LastEditors: 蒋承志
- * @LastEditTime: 2023-10-18 17:20:53
+ * @LastEditTime: 2023-10-27 17:55:09
  */
 import { ethers } from "ethers";
 import dotenv from "dotenv"; // 引入这个可以在这使用process
@@ -12,7 +12,7 @@ dotenv.config();
 const provider = new ethers.JsonRpcProvider(`${process.env.INFURA_SEPOLIA_URL}`);
 
 // 发送钱包
-const wallet1 = new ethers.Wallet('隐藏我的私钥，用的时候自取', provider)
+const wallet1 = new ethers.Wallet('私钥', provider)
 // 随机生成一个钱包
 const wallet2 = ethers.Wallet.createRandom()
 const w2WithPro = wallet2.connect(provider); // 链接provider
